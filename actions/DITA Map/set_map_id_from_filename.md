@@ -1,5 +1,5 @@
 #### ID
-set_map_id_from_filename
+set.map.id.from.filename
 
 #### Name
 Set Map ID

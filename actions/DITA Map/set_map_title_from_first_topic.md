@@ -1,8 +1,8 @@
 #### ID
-set_map_title_from_first_topic
+set.map.title.from.first.topic
 
 #### Name
-Set Map Title From 1st Topic
+Set Map Title From First Topic
 
 #### Description
 

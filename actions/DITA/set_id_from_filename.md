@@ -1,5 +1,5 @@
 #### ID
-set_id_from_filename
+set.id.from.filename
 
 #### Name
 Set ID
