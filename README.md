@@ -2,6 +2,8 @@
 
 Collection of custom oXygenXML actions, organized by framework.
 
+![DEMO](DEMO.gif)
+
 Creating custom actions
 -----------------------------------
 
