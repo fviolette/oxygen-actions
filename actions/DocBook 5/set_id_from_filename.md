@@ -5,7 +5,7 @@ set.id.from.filename
 Set ID
 
 #### Description
-Set the @id attribute for <article>, <book>, <chapter>, <glossary>, <section> and <part> elements
+Set the @id attribute for article, book, chapter, glossary, section and part elements.
 
 #### XPath
 N/A
