@@ -2,6 +2,8 @@
 
 Collection of custom oXygenXML actions, organized by framework.
 
+Running version: 18.1
+
 ![DEMO](DEMO.gif)
 
 Creating custom actions
