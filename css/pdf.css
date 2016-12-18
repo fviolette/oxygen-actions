@@ -1,0 +1,21 @@
+body {
+	font-family: "Consolas";
+}
+
+h1 {
+	font-size : 15pt
+}
+
+h3 {
+	font-style: bold;
+	font-family: "Consolas";
+}
+
+dd {
+	margin-bottom: 3px;
+}
+
+dt {
+	font-style: italic;
+	margin-bottom: 3px;
+}
