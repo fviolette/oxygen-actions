@@ -8,7 +8,7 @@ Insert file with relative path
 Inserts a DITA topic/map in referencing files of different relative depths (e.g. Subject Scheme)
 
 ####  XPath
-//topicmeta
+//topicmeta and not(//mapref/@type = 'subjectScheme')
 
 #### Operation
 XSLTOperation
@@ -53,6 +53,9 @@ XSLTOperation
             <xsl:attribute name="href">
                 <xsl:value-of select="$subjectSchemeLocation"/>
             </xsl:attribute>
+            <xsl:attribute name="type">
+                subjectScheme
+            </xsl:attribute>         
         </xsl:element>
     </xsl:template>
 </xsl:stylesheet>
