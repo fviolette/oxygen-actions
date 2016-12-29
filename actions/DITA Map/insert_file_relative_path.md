@@ -5,7 +5,7 @@ insert.file.relative.path
 Insert file with relative path
 
 ####  Description
-Inserts a file in a DITA map which relative location changes depending form the referencing file's (e.g. Subject Scheme)
+Inserts a DITA topic/map in referencing files of different relative depths (e.g. Subject Scheme)
 
 ####  XPath
 //topicmeta
@@ -27,21 +27,21 @@ XSLTOperation
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
     xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
     
-    <xsl:variable name="subjectSchemeDepth" select="string-length(base-uri(.))-string-length(translate(base-uri(/), '/', ''))"/>
+    <xsl:variable name="resourceDepth" select="string-length(base-uri(.))-string-length(translate(base-uri(/), '/', ''))"/>
     
-    <xsl:variable name="subjectSchemeLocation">
+    <xsl:variable name="resourceLocation">
         <xsl:choose>
-            <xsl:when test="$subjectSchemeDepth eq 6">
-                <xsl:text>../../common/taxonomy/GlobalTaxonomy.ditamap</xsl:text>
+            <xsl:when test="resourceDepth eq 4">
+                <xsl:text>../../../../subjectscheme.ditamap</xsl:text>
             </xsl:when>
-            <xsl:when test="$subjectSchemeDepth eq 7">
-                <xsl:text>../../../common/taxonomy/GlobalTaxonomy.ditamap</xsl:text>
+            <xsl:when test="resourceDepth eq 5">
+                <xsl:text>../../../../../subjectscheme.ditamap</xsl:text>
             </xsl:when>
-            <xsl:when test="$subjectSchemeDepth eq 8">
-                <xsl:text>../../../../common/taxonomy/GlobalTaxonomy.ditamap</xsl:text>
+            <xsl:when test="resourceDepth eq 6">
+                <xsl:text>../../../../../../subjectscheme.ditamap</xsl:text>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:comment>Current depth level of ditamap not expected</xsl:comment>
+                <xsl:comment>Current DITA Map should be at least one level up<xsl:comment>
                 <xsl:comment>Inesrt the subjectSheme manually</xsl:comment>
             </xsl:otherwise>
         </xsl:choose>
