@@ -27,7 +27,8 @@ XSLTOperation
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
     xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
     
-    <xsl:variable name="resourceDepth" select="string-length(base-uri(.))-string-length(translate(base-uri(/), '/', ''))"/>
+    <xsl:variable name="resourceDepth"
+    select="string-length(base-uri(.))-string-length(translate(base-uri(/), '/', ''))"/>
     
     <xsl:variable name="resourceLocation">
         <xsl:choose>

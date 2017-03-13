@@ -14,11 +14,11 @@ N/A
 JSOperation
 
 #### Arguments
+```js
 function doOperation(){
- Packages.ro.sync.ecss.dita.DITAAccess.insertContentReference(authorAccess, new Packages.java.net.URL("${pdu}/reuse/en/my_variables_file.dita"), true);
-}
-
+  Packages.ro.sync.ecss.dita.DITAAccess.insertContentReference(
+    authorAccess, new Packages.java.net.URL("${pdu}/reuse/en/my_variables_file.dita"), true);
+  }
+```
 #### Comments
 Especially useful when using several resource files
-
-
