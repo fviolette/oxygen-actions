@@ -27,31 +27,25 @@ XSLTOperation
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
-    xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
-
-    <xsl:variable name="Concept" select="document(/map/topicref[1]/@href)"/>
-    <xsl:variable name="lookupDoc" select="$Concept/*/title"/>
-
-    <!-- store result set -->
-    <xsl:variable name="FirstPass">
-        <xsl:copy-of select="$lookupDoc" copy-namespaces="no"/>
-    </xsl:variable>
-
-    <!-- fetch title from result set (class ignored)-->
-    <xsl:template name="TitleFromConcept" match="//map/title">
-        <xsl:apply-templates select="$FirstPass"/>
-    </xsl:template>
-
+    xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+    exclude-result-prefixes="#all">
+    
     <!-- IdentityTransform -->
-    <xsl:template match="/ | @* | node()">
+    <xsl:template match="@*|node()">
         <xsl:copy copy-namespaces="no">
-            <xsl:apply-templates select="@* | node()"/>
+            <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
     </xsl:template>
-
-    <!-- Ignores -->
-    <xsl:template name="ignores" match="@class | @ditaarch | @ditaarch:DITAArchVersion | @domains"/>
-
+    
+    <!-- fetch title from result set -->
+    <xsl:template match="//title/text()">
+        <xsl:value-of select="document(/map/topicref[1]/@href)//title/text()"/>    
+    </xsl:template>
+    
+    <!-- in place of -expand:off
+        http://www.saxonica.com/documentation9.5/using-xsl/commandline.html -->
+    <xsl:template match="@class | @ditaarch | @ditaarch:DITAArchVersion | @domains "/>
+    
 </xsl:stylesheet>
 
 ```
