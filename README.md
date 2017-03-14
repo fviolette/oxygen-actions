@@ -30,3 +30,7 @@ Run actions automatically on save
 ---
 
 Refer to the [ExecuteAuthorActionsOnSaveHook](https://github.com/oxygenxml/ExecuteAuthorActionsOnSaveHook) plugin.
+
+Build a list of actions in PDF
+---
+`node build`
