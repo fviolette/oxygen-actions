@@ -35,5 +35,5 @@ Build a list of actions in PDF
 ---
 ```bash 
 $ npm install
-$ node install
+$ node build
 ```
