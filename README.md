@@ -33,4 +33,5 @@ Refer to the [ExecuteAuthorActionsOnSaveHook](https://github.com/oxygenxml/Execu
 
 Build a list of actions in PDF
 ---
-`node build`
+$ npm install
+$ node install
