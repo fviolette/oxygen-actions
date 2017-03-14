@@ -1,0 +1,34 @@
+{
+  "name": "oxygen-actions",
+  "version": "1.0.0",
+  "description": "List of oXygenXML Actions",
+  "main": "build.js",
+  "dependencies": {
+    "glob": "^7.1.1",
+    "markdown-pdf": "^7.0.0",
+    "highlight.js": "^9.10.0",
+    "remarkable": "^1.7.1",
+    "through": "^2.3.8",
+    "marked": "^0.3.6",
+    "readdirp": "^2.1.0",
+    "markdown-toc": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fviolette/oxygen-actions.git"
+  },
+  "keywords": [
+    "oXygenXML",
+    "oXygen"
+  ],
+  "author": "François Violette",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fviolette/oxygen-actions/issues"
+  },
+  "homepage": "https://github.com/fviolette/oxygen-actions#readme"
+}
